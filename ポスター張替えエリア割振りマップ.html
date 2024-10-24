@@ -19,6 +19,68 @@
         var sharedInfoWindow = new google.maps.InfoWindow();            
     
         var marker = new google.maps.Marker({
+          position: { lat: 34.7548977, lng: 137.4223718 },
+          map: map,
+          icon: {
+            url: 'https://imgur.com/V7ZIgFW.png',
+            labelOrigin: new google.maps.Point(24, -7),   // ラベルの表示位置を微調整 (x, y)
+            // scaledSize: new google.maps.Size(80, 80)   // アイコンのサイズを変更
+            scaledSize: new google.maps.Size(50, 50)      // アイコンのサイズを変更
+          },
+          label: {
+            text: '5955',
+            color: 'red',
+            fontsize: '40px',
+            fontWeight: 'bold'
+          },
+          //title: '名簿ID: ' + 5955
+        });
+
+        (function(marker, name_id, name, post_code, adress, gmap_url) {
+          marker.addListener('click', function() {
+            // var content = '<h style="font-size:32px;">名簿ID: ' + name_id + '<br>' + post_code + '<br>' + adress + '</h1><a href="' + gmap_url + '" target="_blank">Googleマップで開く</a>';
+            var content = '<h2 style="margin-top: 0px; padding-top: 0px; color: red;">名簿ID: ' + name_id + '<br>' + 
+            '<h2 style="font-size:18px; color: black;">' + name + '<br>' + post_code + '<br>' + adress + '</h2>' + 
+            '<a href="' + gmap_url + '" target="_blank">Googleマップで開く</a>';
+            //'<a href="' + gmap_url + '" target="_blank">Googleマップで開く</a><br>' +
+            //'<br><br><label> <input type="checkbox" id="visited-checkbox"> 張替済み </label>'; 
+            sharedInfoWindow.setContent(content);
+            sharedInfoWindow.open(map, marker);
+          });
+        })(marker, '5955', 'nan', '440-0831', '愛知県豊橋市西岩田４丁目１３−１３', 'https://www.google.com/maps?q=34.7548977,137.4223718');
+        
+        var marker = new google.maps.Marker({
+          position: { lat: 34.7223342, lng: 137.4571007 },
+          map: map,
+          icon: {
+            url: 'https://imgur.com/ieGSvR9.png',
+            labelOrigin: new google.maps.Point(24, -7),   // ラベルの表示位置を微調整 (x, y)
+            // scaledSize: new google.maps.Size(80, 80)   // アイコンのサイズを変更
+            scaledSize: new google.maps.Size(50, 50)      // アイコンのサイズを変更
+          },
+          label: {
+            text: '5618',
+            color: 'red',
+            fontsize: '40px',
+            fontWeight: 'bold'
+          },
+          //title: '名簿ID: ' + 5618
+        });
+
+        (function(marker, name_id, name, post_code, adress, gmap_url) {
+          marker.addListener('click', function() {
+            // var content = '<h style="font-size:32px;">名簿ID: ' + name_id + '<br>' + post_code + '<br>' + adress + '</h1><a href="' + gmap_url + '" target="_blank">Googleマップで開く</a>';
+            var content = '<h2 style="margin-top: 0px; padding-top: 0px; color: red;">名簿ID: ' + name_id + '<br>' + 
+            '<h2 style="font-size:18px; color: black;">' + name + '<br>' + post_code + '<br>' + adress + '</h2>' + 
+            '<a href="' + gmap_url + '" target="_blank">Googleマップで開く</a>';
+            //'<a href="' + gmap_url + '" target="_blank">Googleマップで開く</a><br>' +
+            //'<br><br><label> <input type="checkbox" id="visited-checkbox"> 張替済み </label>'; 
+            sharedInfoWindow.setContent(content);
+            sharedInfoWindow.open(map, marker);
+          });
+        })(marker, '5618', 'ポスター', '441-3155', '愛知県豊橋市二川町鼡池', 'https://www.google.com/maps?q=34.7223342,137.4571007');
+        
+        var marker = new google.maps.Marker({
           position: { lat: 34.6235442, lng: 137.2368286 },
           map: map,
           icon: {
@@ -203,6 +265,37 @@
             sharedInfoWindow.open(map, marker);
           });
         })(marker, '4648', 'ポスター', '441-8044', '愛知県豊橋市南小池町201', 'https://www.google.com/maps?q=34.7448128,137.3863448');
+        
+        var marker = new google.maps.Marker({
+          position: { lat: 34.7226647, lng: 137.4557702 },
+          map: map,
+          icon: {
+            url: 'https://imgur.com/ieGSvR9.png',
+            labelOrigin: new google.maps.Point(24, -7),   // ラベルの表示位置を微調整 (x, y)
+            // scaledSize: new google.maps.Size(80, 80)   // アイコンのサイズを変更
+            scaledSize: new google.maps.Size(50, 50)      // アイコンのサイズを変更
+          },
+          label: {
+            text: '4641',
+            color: 'red',
+            fontsize: '40px',
+            fontWeight: 'bold'
+          },
+          //title: '名簿ID: ' + 4641
+        });
+
+        (function(marker, name_id, name, post_code, adress, gmap_url) {
+          marker.addListener('click', function() {
+            // var content = '<h style="font-size:32px;">名簿ID: ' + name_id + '<br>' + post_code + '<br>' + adress + '</h1><a href="' + gmap_url + '" target="_blank">Googleマップで開く</a>';
+            var content = '<h2 style="margin-top: 0px; padding-top: 0px; color: red;">名簿ID: ' + name_id + '<br>' + 
+            '<h2 style="font-size:18px; color: black;">' + name + '<br>' + post_code + '<br>' + adress + '</h2>' + 
+            '<a href="' + gmap_url + '" target="_blank">Googleマップで開く</a>';
+            //'<a href="' + gmap_url + '" target="_blank">Googleマップで開く</a><br>' +
+            //'<br><br><label> <input type="checkbox" id="visited-checkbox"> 張替済み </label>'; 
+            sharedInfoWindow.setContent(content);
+            sharedInfoWindow.open(map, marker);
+          });
+        })(marker, '4641', '加藤　泰司', '441-3155', '愛知県豊橋市二川町字東町115番地の2', 'https://www.google.com/maps?q=34.7226647,137.4557702');
         
         var marker = new google.maps.Marker({
           position: { lat: 34.7564538, lng: 137.3893858 },
@@ -1721,7 +1814,7 @@
             sharedInfoWindow.setContent(content);
             sharedInfoWindow.open(map, marker);
           });
-        })(marker, '4060', '株式会社マルイモータース', '441-8067', '愛知県豊橋市小浜町17', 'https://www.google.com/maps?q=34.7404988,137.366716');
+        })(marker, '4060', '伊藤　正利', '441-8067', '愛知県豊橋市小浜町17', 'https://www.google.com/maps?q=34.7404988,137.366716');
         
         var marker = new google.maps.Marker({
           position: { lat: 34.7272638, lng: 137.4412628 },
@@ -1783,38 +1876,7 @@
             sharedInfoWindow.setContent(content);
             sharedInfoWindow.open(map, marker);
           });
-        })(marker, '4056', '株式会社サンコー', '441-8071', '愛知県豊橋市大山町下青尻56', 'https://www.google.com/maps?q=34.7273919,137.3569896');
-        
-        var marker = new google.maps.Marker({
-          position: { lat: 34.740482, lng: 137.3615748 },
-          map: map,
-          icon: {
-            url: 'https://imgur.com/nHULQxv.png',
-            labelOrigin: new google.maps.Point(24, -7),   // ラベルの表示位置を微調整 (x, y)
-            // scaledSize: new google.maps.Size(80, 80)   // アイコンのサイズを変更
-            scaledSize: new google.maps.Size(50, 50)      // アイコンのサイズを変更
-          },
-          label: {
-            text: '4055',
-            color: 'red',
-            fontsize: '40px',
-            fontWeight: 'bold'
-          },
-          //title: '名簿ID: ' + 4055
-        });
-
-        (function(marker, name_id, name, post_code, adress, gmap_url) {
-          marker.addListener('click', function() {
-            // var content = '<h style="font-size:32px;">名簿ID: ' + name_id + '<br>' + post_code + '<br>' + adress + '</h1><a href="' + gmap_url + '" target="_blank">Googleマップで開く</a>';
-            var content = '<h2 style="margin-top: 0px; padding-top: 0px; color: red;">名簿ID: ' + name_id + '<br>' + 
-            '<h2 style="font-size:18px; color: black;">' + name + '<br>' + post_code + '<br>' + adress + '</h2>' + 
-            '<a href="' + gmap_url + '" target="_blank">Googleマップで開く</a>';
-            //'<a href="' + gmap_url + '" target="_blank">Googleマップで開く</a><br>' +
-            //'<br><br><label> <input type="checkbox" id="visited-checkbox"> 張替済み </label>'; 
-            sharedInfoWindow.setContent(content);
-            sharedInfoWindow.open(map, marker);
-          });
-        })(marker, '4055', '佐藤　澄子', '441-8066', '愛知県豊橋市王ヶ崎町宮脇2-9', 'https://www.google.com/maps?q=34.740482,137.3615748');
+        })(marker, '4056', '岡田　力', '441-8071', '愛知県豊橋市大山町下青尻56', 'https://www.google.com/maps?q=34.7273919,137.3569896');
         
         var marker = new google.maps.Marker({
           position: { lat: 34.7574299, lng: 137.3604104 },
@@ -2434,7 +2496,7 @@
             sharedInfoWindow.setContent(content);
             sharedInfoWindow.open(map, marker);
           });
-        })(marker, '3811', 'まるわか', '441-3503', '愛知県田原市若見町権亟地４５', 'https://www.google.com/maps?q=34.6025527,137.1702071');
+        })(marker, '3811', '大場　孝', '441-3503', '愛知県田原市若見町権亟地４５', 'https://www.google.com/maps?q=34.6025527,137.1702071');
         
         var marker = new google.maps.Marker({
           position: { lat: 34.7182693, lng: 137.3983303 },
@@ -3336,7 +3398,7 @@
         })(marker, '1280', '小林酒店', '441-8143', '愛知県豊橋市松井町南新切64-2', 'https://www.google.com/maps?q=34.7232624,137.37731');
         
         var marker = new google.maps.Marker({
-          position: { lat: 34.7239123, lng: 137.3766461 },
+          position: { lat: 34.7238706, lng: 137.3766156 },
           map: map,
           icon: {
             url: 'https://imgur.com/R0Jm9MZ.png',
@@ -3364,7 +3426,7 @@
             sharedInfoWindow.setContent(content);
             sharedInfoWindow.open(map, marker);
           });
-        })(marker, '1279', 'KK Indian Restaurant 豊橋店', '441-8143', '愛知県豊橋市松井町南新切33-1', 'https://www.google.com/maps?q=34.7239123,137.3766461');
+        })(marker, '1279', 'KK Indian Restaurant 豊橋店', '441-8143', '愛知県豊橋市松井町南新切33-1', 'https://www.google.com/maps?q=34.7238706,137.3766156');
         
         var marker = new google.maps.Marker({
           position: { lat: 34.724165, lng: 137.3746936 },
@@ -4108,7 +4170,7 @@
             sharedInfoWindow.setContent(content);
             sharedInfoWindow.open(map, marker);
           });
-        })(marker, '1159', '炉ばた かぶと', '441-8107', '愛知県豊橋市南栄町字空池59-9', 'https://www.google.com/maps?q=34.7336391,137.3847118');
+        })(marker, '1159', '鈴木　善行', '441-8107', '愛知県豊橋市南栄町字空池59-9', 'https://www.google.com/maps?q=34.7336391,137.3847118');
         
         var marker = new google.maps.Marker({
           position: { lat: 34.7350529, lng: 137.3858228 },
@@ -4139,7 +4201,7 @@
             sharedInfoWindow.setContent(content);
             sharedInfoWindow.open(map, marker);
           });
-        })(marker, '1158', '熊谷電気商会', '441-8107', '愛知県豊橋市南栄町空池8-46', 'https://www.google.com/maps?q=34.7350529,137.3858228');
+        })(marker, '1158', '熊谷', '441-8107', '愛知県豊橋市南栄町空池8-46', 'https://www.google.com/maps?q=34.7350529,137.3858228');
         
         var marker = new google.maps.Marker({
           position: { lat: 34.734864, lng: 137.3852812 },
@@ -4945,7 +5007,7 @@
             sharedInfoWindow.setContent(content);
             sharedInfoWindow.open(map, marker);
           });
-        })(marker, '1075', 'インド料理 アーチャーラ', '441-8077', '愛知県豊橋市神野新田町宮前84-1', 'https://www.google.com/maps?q=34.7376963,137.3627637');
+        })(marker, '1075', 'カトリ　ヒラ', '441-8077', '愛知県豊橋市神野新田町宮前84-1', 'https://www.google.com/maps?q=34.7376963,137.3627637');
         
         var marker = new google.maps.Marker({
           position: { lat: 34.7048475, lng: 137.3510049 },
@@ -7301,7 +7363,7 @@
             sharedInfoWindow.setContent(content);
             sharedInfoWindow.open(map, marker);
           });
-        })(marker, '699', '高橋', '441-0152', '愛知県豊橋市前芝町北堤13-1', 'https://www.google.com/maps?q=34.7838949,137.3382917');
+        })(marker, '699', '高橋　宏之', '441-0152', '愛知県豊橋市前芝町北堤13-1', 'https://www.google.com/maps?q=34.7838949,137.3382917');
         
         var marker = new google.maps.Marker({
           position: { lat: 34.7648549, lng: 137.3840693 },
@@ -7394,7 +7456,7 @@
             sharedInfoWindow.setContent(content);
             sharedInfoWindow.open(map, marker);
           });
-        })(marker, '689', '株式会社第一無線　オーディオクラブハウス', '440-0896', '愛知県豊橋市萱町17', 'https://www.google.com/maps?q=34.7654354,137.385397');
+        })(marker, '689', '株式会社第一無線オーディオクラブハウス', '440-0896', '愛知県豊橋市萱町17', 'https://www.google.com/maps?q=34.7654354,137.385397');
         
         var marker = new google.maps.Marker({
           position: { lat: 34.765091, lng: 137.385372 },
@@ -8138,7 +8200,7 @@
             sharedInfoWindow.setContent(content);
             sharedInfoWindow.open(map, marker);
           });
-        })(marker, '615', '松井', '440-0871', '愛知県豊橋市新吉町38', 'https://www.google.com/maps?q=34.7631196,137.3924436');
+        })(marker, '615', '松井　尚子', '440-0871', '愛知県豊橋市新吉町38', 'https://www.google.com/maps?q=34.7631196,137.3924436');
         
         var marker = new google.maps.Marker({
           position: { lat: 34.7634834, lng: 137.3932212 },
